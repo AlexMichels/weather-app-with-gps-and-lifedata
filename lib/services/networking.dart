@@ -6,8 +6,9 @@ class NetworkHelper{
 
 
 Future<String> getWeatherData() async{
-
-String apiKey = 'b3166391067e8006cb8723278f603d92';  
+  
+  //! Add your API-Key here
+String apiKey = 'Write-your-key-here';  
   
 GetLocation loca = GetLocation();
 await loca.getLocation();
@@ -27,7 +28,8 @@ throw 'ERROR! code not 200';
 //!This function updates the data for manuall city searches
 Future<String> getCitySearch({required cityname}) async{
 
-String apiKey = 'b3166391067e8006cb8723278f603d92';  
+  //! Add your API-Key here
+String apiKey = 'Api-Key-here';  
   
 var url = Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=$apiKey&units=metric');
 http.Response response = await http.get(url);
